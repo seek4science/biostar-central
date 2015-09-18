@@ -100,7 +100,7 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Tag'},
             'count': ('django.db.models.fields.IntegerField', [], {'default': '0'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'name': ('django.db.models.fields.TextField', [], {'max_length': '50', 'db_index': 'True'})
+            'name': ('django.db.models.fields.TextField', [], {'max_length': '50'})
         },
         u'posts.vote': {
             'Meta': {'object_name': 'Vote'},

@@ -22,7 +22,7 @@ def now():
     return datetime.datetime.utcnow().replace(tzinfo=utc)
 
 class Tag(models.Model):
-    name = models.TextField(max_length=50, db_index=True)
+    name = models.TextField(max_length=50)
     count = models.IntegerField(default=0)
 
     @staticmethod

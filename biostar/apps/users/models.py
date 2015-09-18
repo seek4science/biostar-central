@@ -171,7 +171,7 @@ class EmailList(models.Model):
 
 
 class Tag(models.Model):
-    name = models.TextField(max_length=50, db_index=True)
+    name = models.TextField(max_length=50)
 
 
 # Default message preferences.

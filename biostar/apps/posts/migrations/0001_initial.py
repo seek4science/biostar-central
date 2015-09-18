@@ -11,7 +11,7 @@ class Migration(SchemaMigration):
         # Adding model 'Tag'
         db.create_table(u'posts_tag', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.TextField')(max_length=50, db_index=True)),
+            ('name', self.gf('django.db.models.fields.TextField')(max_length=50)),
             ('count', self.gf('django.db.models.fields.IntegerField')(default=0)),
         ))
         db.send_create_signal(u'posts', ['Tag'])
@@ -158,7 +158,7 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Tag'},
             'count': ('django.db.models.fields.IntegerField', [], {'default': '0'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'name': ('django.db.models.fields.TextField', [], {'max_length': '50', 'db_index': 'True'})
+            'name': ('django.db.models.fields.TextField', [], {'max_length': '50'})
         },
         u'posts.vote': {
             'Meta': {'object_name': 'Vote'},
