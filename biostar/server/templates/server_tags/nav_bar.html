@@ -8,7 +8,6 @@
                     <a href="{% url 'topic-list' topic=word %}">{{ word }} <sup><b>{% get_count COUNTS word %}</b></sup></a>
                 </div>
             {% endfor %}
-            <div class="col-md-1 {% active 'planet' topic %}"><a href="{% url 'planet' %}">Planet <sup><b>{% get_count COUNTS 'planet' %}</b></sup></a></div>
             <div class="col-md-1 {% current request 'tag-list' %}"><a href="{% url 'tag-list' %}">All &raquo;</a></div>
         </ul>
     </div>
@@ -28,7 +27,6 @@
                         <a href="/t/{{ word }}">{{ word }}</a>
                     </li>
                 {% endfor %}
-                <li><a href="{% url 'planet' %}">Planet</a></li>
                 <li><a href="{% url 'tag-list' %}">All &raquo;</a></li>
             </ul>
         </div>
