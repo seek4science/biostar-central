@@ -78,7 +78,7 @@ class LongForm(forms.Form):
     )
 
     content = forms.CharField(widget=forms.Textarea,
-                              min_length=80, max_length=15000,
+                              min_length=40, max_length=15000,
                               label="Enter your post below")
 
     def __init__(self, *args, **kwargs):
