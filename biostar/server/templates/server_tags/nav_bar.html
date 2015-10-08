@@ -62,7 +62,7 @@
                     <li>
                         <a href="{% url 'new-post' %}"><i class="fa fa-plus"></i> New Post</a>
                     </li>
-                    <li class="divider"></li>
+                    <li class="divi der"></li>
                     <li>
                         <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a>
                     </li>
@@ -95,14 +95,14 @@
 
         {% if user.is_authenticated %}
 
-            <div class="col-md-9 top {% active 'userprofile' topic %}">
+            <div class="col-md-9 top {% active 'userprofile' topic %}" style="background-color:#19198C;color:white">
 
-                <i class="fa fa-user"></i> {% userlink user %} &nbsp;|&nbsp;
-                <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Logout </a>
+                <i class="fa fa-user"></i> {% userlink user 'white' %} &nbsp;|&nbsp;
+                <a href="{% url 'logout' %}" style="color:white"><i class="fa fa-sign-out"></i> Logout </a>
 
                 <span class="pull-right">
-                    <a href="{% url 'flatpage' 'about' %}">about</a> &bull; <a href="{% url 'flatpage' 'faq' %}">faq</a>
-                    &bull; <a href="{% url 'rss' %}">rss <i class="fa fa-rss"></i></a>
+                    <a href="{% url 'flatpage' 'about' %}" style="color:white;font-weight:bold">ABOUT</a> &bull; <a href="{% url 'flatpage' 'faq' %}"  style="color:white">faq</a>
+                    &bull; <a href="{% url 'rss' %}" style="color:white">rss <i class="fa fa-rss"></i></a>
                 </span>
             </div>
 
@@ -171,10 +171,10 @@
 
         {% else %}
 
-            <div class="col-md-9 top text-center">
+            <div class="col-md-9 top text-center" style="background-color:#19198C">
                 {%  include "site_description.html" %}
                 <span class="pull-right">
-                    <a href="{% url 'flatpage' 'about' %}">about</a> &bull; <a href="{% url 'flatpage' 'faq' %}">faq</a>
+                    <a href="{% url 'flatpage' 'about' %}" style="font-weight:bold">ABOUT</a> &bull; <a href="{% url 'flatpage' 'faq' %}">faq</a>
                     &bull; <a href="{% url 'rss' %}">rss <i class="fa fa-rss"></i></a>
                 </span>
             </div>

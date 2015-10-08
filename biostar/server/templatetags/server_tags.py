@@ -237,14 +237,14 @@ def post_actions(post, user, label="COMMENT"):
 
 
 @register.inclusion_tag('server_tags/user_link.html')
-def userlink(user):
+def userlink(user, color=''):
     "Renders the flair"
     marker = "&bull;"
     if user.is_admin:
         marker = '&diams;&diams;'
     elif user.is_moderator:
         marker = '&diams;'
-    return {'user': user, 'marker': marker}
+    return {'user': user, 'marker': marker, 'color': color}
 
 # this contains the body of each comment
 COMMENT_TEMPLATE = 'server_tags/comment_body.html'
