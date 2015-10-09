@@ -18,6 +18,7 @@ conf/requirements/local*.txt
 conf/requirements/production*.txt
 conf/requirements/staging*.txt
 conf/requirements/test*.txt
+conf/requirements/deploy*.txt
 
 # Common machine-specific logger files.
 biostar/settings/logger_*.py
